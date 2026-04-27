@@ -5,6 +5,7 @@
     background-repeat: no-repeat;
     height: 100vh;
     width: 100%;
+
 }
 .logo-text{
   display: flex;
@@ -59,77 +60,66 @@ header nav ul li a:hover {
 
 }
 @media (max-width: 992px) {
+    header {
+        padding: 5px 0; /* تقليل عرض الشريط الأسود */
+    }
+
+    header nav {
+        flex-direction: row; 
+        justify-content: space-between;
+        padding: 0 5px;
+    }
+
+    header nav ul {
+        gap: 5px; /* مسافة صغيرة جداً بين الكلمات */
+        justify-content: flex-end;
+        flex-wrap: wrap; /* لو الشاشة ضيقة جداً ينزلوا في سطر تاني بس بشكل منظم */
+        max-width: 70%; /* عشان مياكلش مساحة اللوجو */
+    }
+
+    header nav ul li {
+        margin-left: 5px;
+    }
+
+    header nav ul li a {
+        font-size: 11px; /* حجم خط مناسب للقراءة وموفر للمساحة */
+        white-space: nowrap;
+    }
+
+    .logo-text h2 {
+        font-size: 14px; /* تصغير اللوجو عشان يسيب مساحة للمنيو */
+    }
+}
+/* @media (max-width: 992px) {
     header nav {
         display: flex;
-        flex-direction: row; /* نضمن إنهم جنب بعض */
+        flex-direction: row; 
         justify-content: space-between;
         align-items: center;
         padding: 0 10px;
-        flex-wrap: nowrap; /* ممنوع أي عنصر ينزل سطر جديد */
+        flex-wrap: nowrap; 
     }
 
     header nav ul {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap; /* ممنوع اللينكات تنزل تحت بعضها */
-        gap: 8px; /* مسافة صغيرة جداً بين الكلمات */
+        flex-wrap: nowrap;
+        gap: 8px; 
         margin: 0;
         padding: 0;
     }
 
     header nav ul li {
-        margin: 0; /* نشيل المارجن عشان نوفر مساحة */
+        margin: 0; 
     }
 
     header nav ul li a {
-        font-size: 10px; /* نصغر الخط جداً عشان العرض يقضي */
-        white-space: nowrap; /* نمنع الكلمة الواحدة تتقسم على سطرين */
+        font-size: 10px;
+        white-space: nowrap;
     }
 
     .logo-text {
-        font-size: 14px; /* نصغر اللوجو كمان */
+        font-size: 14px;
         min-width: fit-content;
-    }
-}
-/* 
-@media (max-width: 992px) {
-    header nav {
-        flex-direction: row; 
-        justify-content: space-between;
-        padding: 0 10px;
-        width: 100%;
-    }
-
-    header nav ul {
-        margin-top: 0;
-        gap: 10px; 
-        justify-content: flex-end;
-    }
-
-    header nav ul li {
-        margin: 0 5px;
-    }
-
-    header nav ul li a {
-        font-size: 12px; 
-    }
-
-    .logo-text h2 {
-        font-size: 16px; 
-    }
-} */
-/* @media (max-width: 992px) {
-    header nav {
-        flex-direction: column; 
-    }
-
-    header nav ul {
-        margin-top: 10px;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    header nav ul li {
-        margin: 5px 10px;
     }
 } */
